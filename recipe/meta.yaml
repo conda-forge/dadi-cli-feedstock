@@ -14,7 +14,7 @@ build:
     - dadi-cli = dadi_cli.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
