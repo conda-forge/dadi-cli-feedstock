@@ -1,5 +1,5 @@
 {% set name = "dadi-cli" %}
-{% set version = "0.9.8" %}
+{% set version = "0.9.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dadi_cli-{{ version }}.tar.gz
-  sha256: e087ca7f98b75eed2a0378d3ccc9b0a5aa599cb2473914f79e989607c7bfe3f7
+  sha256: 04998c90331eaec9b2bfcea231f2258bb7586c5e1804c2ab460f5b98374bdb3e
 
 build:
   entry_points:
