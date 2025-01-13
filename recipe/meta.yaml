@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dadi_cli-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/dadi_cli-{{ version }}.tar.gz
   sha256: e087ca7f98b75eed2a0378d3ccc9b0a5aa599cb2473914f79e989607c7bfe3f7
 
 build:
@@ -14,15 +14,15 @@ build:
     - dadi-cli = dadi_cli.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - hatchling
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - dadi
 
 test:
@@ -45,6 +45,7 @@ test:
 
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/xin-huang/dadi-cli
